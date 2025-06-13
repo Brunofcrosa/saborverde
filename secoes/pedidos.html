@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="../css/estilos.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/sweetalert2.min.css">
+  <title>SaborVerde</title>
+</head>
+
+<body>
+  <nav class="bg-white">
+    <div class="container px-4">
+      <div class="d-flex justify-content-between align-items-center py-3">
+        <a href="../index.html" class="d-flex align-items-center text-decoration-none" aria-label="Página inicial SaborVerde">
+          <img src="../imagens/logo.png" alt="Logo SaborVerde" class="img-fluid logo-navbar">
+        </a>
+
+        <nav class="d-none d-md-flex align-items-center gap-4">
+          <a href="../index.html" class="text-success text-decoration-none fw-medium">Início</a>
+          <a href="../index.html#sobre" class="text-success text-decoration-none fw-medium">Sobre</a>
+          <a href="../index.html#produtos" class="text-success text-decoration-none fw-medium">Produtos</a>
+        </nav>
+
+        <div class="d-none d-md-flex align-items-center gap-3">
+          <a href="#" class="btn btn-success fw-medium px-4 py-2 rounded-pill">Fazer Pedido</a>
+        </div>
+
+        <button class="d-md-none btn btn-outline-secondary border-0" type="button" data-bs-toggle="collapse"
+          data-bs-target="#mobileMenu" aria-controls="mobileMenu" aria-expanded="false" aria-label="Toggle navigation">
+          <i class="bi bi-list fs-4" aria-hidden="true"></i>
+        </button>
+      </div>
+
+      <div class="collapse d-md-none position-fixed w-100 end-0 top-0 mt-5" id="mobileMenu">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-11 col-sm-8 col-md-6">
+                    <div class="py-2 border-top bg-white rounded shadow-sm">
+                        <nav class="d-flex flex-column gap-3 py-2 px-3 text-center">
+                            <a href="../index.html" class="text-dark text-decoration-none fw-medium mobile-nav-link">Início</a>
+                            <a href="../index.html#sobre" class="text-dark text-decoration-none fw-medium mobile-nav-link">Sobre</a>
+                            <a href="../index.html#produtos" class="text-dark text-decoration-none fw-medium mobile-nav-link">Produtos</a>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+  </nav>
+
+  <main>
+    <section class="py-5">
+      <div class="container px-4">
+        <div class="mx-auto form-card">
+          <div class="card -lg">
+            <div class="card-header text-center py-4">
+              <h2 class="card-title fs-4 fw-bold d-flex align-items-center justify-content-center gap-2 mb-2">Formulário de Pedido</h2>
+              <p class="text-muted mb-0">
+                Preencha os dados abaixo para fazer seu pedido
+              </p>
+            </div>
+            <div class="card-body p-4">
+              <form id="formPedido" action="#" method="POST" class="needs-validation" novalidate>
+                <div class="mb-4">
+                  <h3 class="fs-5 fw-semibold text-dark mb-3">Dados Pessoais</h3>
+
+                  <div class="mb-3">
+                    <label for="nome" class="form-label">Nome Completo <span class="text-danger">*</span></label>
+                    <input type="text" class="form-control" id="nome" placeholder="Digite seu nome completo" required />
+                    <div class="invalid-feedback">
+                      Por favor, digite seu nome.
+                    </div>
+                  </div>
+
+                  <div class="mb-3">
+                    <label for="email" class="form-label">E-mail <span class="text-danger">*</span></label>
+                    <input type="email" class="form-control" id="email" placeholder="seu@email.com" required />
+                    <div class="invalid-feedback">
+                      Por favor, digite um e-mail válido.
+                    </div>
+                  </div>
+
+                  <div class="mb-3">
+                    <label for="telefone" class="form-label">Telefone <span class="text-danger">*</span></label>
+                    <input type="tel" class="form-control" id="telefone" placeholder="(11) 99999-9999" required />
+                    <div class="invalid-feedback">
+                      Por favor, digite seu telefone.
+                    </div>
+                  </div>
+
+                  <div class="mb-3">
+                    <label for="endereco" class="form-label">Endereço Completo <span
+                        class="text-danger">*</span></label>
+                    <input type="text" class="form-control" id="endereco" placeholder="Rua, número, bairro, cidade, CEP"
+                      required />
+                    <div class="invalid-feedback">
+                      Por favor, digite seu endereço.
+                    </div>
+                  </div>
+                </div>
+
+                <div class="mb-4">
+                  <h3 class="fs-5 fw-semibold text-dark mb-3">Produto</h3>
+
+                  <div class="mb-3">
+                    <label for="produto" class="form-label">Selecione o Produto <span
+                        class="text-danger">*</span></label>
+                    <select class="form-select" id="produto" required>
+                      <option value="">Escolha um produto</option>
+                      <option value="maca-fuji">Maçã - R$ 9,50/kg</option>
+                      <option value="banana-prata">Banana - R$ 5,20/kg</option>
+                      <option value="alface-crespa">Alface - R$ 6,00/kg</option>
+                      <option value="tomate-cereja">Tomate - R$ 7,80/kg</option>
+                      <option value="cenoura">Cenoura - R$ 4,50/kg</option>
+                      <option value="rucula">Rúcula - R$ 18,00/kg</option>
+                    </select>
+                    <div class="invalid-feedback">
+                      Por favor, selecione um produto.
+                    </div>
+                  </div>
+
+                  <div class="mb-3">
+                    <label for="quantidade" class="form-label">Quantidade (kg) <span
+                        class="text-danger">*</span></label>
+                    <select class="form-select" id="quantidade" required>
+                      <option value="1">1 kg</option>
+                      <option value="2">2 kg</option>
+                      <option value="3">3 kg</option>
+                      <option value="4">4 kg</option>
+                      <option value="5">5 kg</option>
+                      <option value="10">10 kg</option>
+                    </select>
+                    <div class="invalid-feedback">
+                      Por favor, selecione a quantidade.
+                    </div>
+                  </div>
+                </div>
+
+                <button type="submit" class="btn btn-success btn-lg w-100 rounded-pill -lg">Enviar Pedido</button>
+
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-white text-dark">
+    <div class="container px-3 px-sm-4 pt-4 pt-md-5">
+        <div class="row g-4">
+            <div class="col-12 col-md-3">
+                <div class="d-flex flex-column h-100">
+                    <a href="#inicio"
+                        class="d-flex justify-content-center justify-content-md-start align-items-center mb-3 text-decoration-none"
+                        aria-label="Página inicial SaborVerde">
+                        <span class="fs-4 fw-bold text-success">SaborVerde</span>
+                    </a>
+                    <p class="small text-center text-md-start mb-3 mb-md-0">
+                        Fornecendo frutas e verduras frescas e de qualidade para sua mesa,
+                        direto do produtor para você.
+                    </p>
+                    <div class="d-flex justify-content-center justify-content-md-start gap-3 mb-4 mb-md-0 pt-4">
+                        <a href="#" class="text-dark" aria-label="SaborVerde no Facebook"><i
+                                class="bi bi-facebook footer-social-icon" aria-hidden="true"></i></a>
+                        <a href="#" class="text-dark" aria-label="SaborVerde no Instagram"><i
+                                class="bi bi-instagram footer-social-icon" aria-hidden="true"></i></a>
+                        <a href="#" class="text-dark" aria-label="SaborVerde no Twitter"><i
+                                class="bi bi-twitter-x footer-social-icon" aria-hidden="true"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="d-md-none border-top border-secondary pt-3"></div>
+            
+            <div class="col-12 col-md-3 order-md-4 order-sm-4 ">
+                <h5 class="mb-3 footer-heading text-center text-md-start">Contato</h5>
+                <ul class="list-unstyled text-dark-50">
+                    <li
+                        class="mb-2 d-flex align-items-center gap-2 justify-content-center justify-content-md-start">
+                        <i class="bi bi-telephone text-success"></i>
+                        <span class="small">(XX) XXXXX-XXXX</span>
+                    </li>
+                    <li
+                        class="mb-2 d-flex align-items-center gap-2 justify-content-center justify-content-md-start">
+                        <i class="bi bi-envelope text-success"></i>
+                        <span class="small">contato@saborverde.com</span>
+                    </li>
+                    <li class="mb-2 d-flex gap-2 justify-content-center justify-content-md-start">
+                        <i class="bi bi-geo-alt text-success footer-address-icon"></i>
+                        <span class="small text-center text-md-start">
+                            Av. Roraima, nº 1000<br>
+                            Cidade Universitária, Santa Maria - RS<br>
+                            CEP: 97105-900
+                        </span>
+                    </li>
+                </ul>
+            </div>
+
+
+            <div class="col-12 col-md-3">
+                <h5 class="mb-3 footer-heading text-center text-md-start">Links Rápidos</h5>
+                <ul class="nav flex-column text-center text-md-start">
+                    <li class="nav-item mb-2">
+                        <a href="../index.html" class="nav-link p-0 text-dark-50">Início</a>
+                    </li>
+                    <li class="nav-item mb-2">
+                        <a href="../index.html#sobre" class="nav-link p-0 text-dark-50">Sobre Nós</a>
+                    </li>
+                    <li class="nav-item mb-2">
+                        <a href="../index.html#produtos" class="nav-link p-0 text-dark-50">Produtos</a>
+                    </li>
+                    <li class="nav-item mb-2">
+                        <a href="#" class="nav-link p-0 text-dark-50">Contato</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="d-md-none border-top border-secondary pt-3"></div>
+
+            <div class="col-12 col-md-3">
+                <h5 class="mb-3 footer-heading text-center text-md-start">Produtos</h5>
+                <ul class="list-unstyled text-dark-50 text-center text-md-start">
+                    <li class="mb-2">Frutas</li>
+                    <li class="mb-2">Verduras</li>
+                    <li class="mb-2">Legumes</li>
+                    <li class="mb-2">Temperos</li>
+                </ul>
+            </div>
+            <div class="d-md-none border-top border-secondary pt-3"></div>
+        </div>
+
+        <div class="border-top border-secondary mt-4 pt-4 text-center">
+            <p class="small text-dark-50 copyright-text">
+                © 2025 SaborVerde. Todos os direitos reservados.
+            </p>
+        </div>
+    </div>
+</footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="../js/pedidos.js"></script>
+</body>
+
+</html>
