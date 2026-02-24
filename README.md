@@ -17,83 +17,43 @@
 
 ## 📋 Sobre o Projeto
 
-O **Sabor Verde** é um site institucional desenvolvido em HTML, CSS e JavaScript puro para um restaurante focado em alimentação natural e saudável. O projeto foi construído com foco em performance, sem dependência de frameworks externos, garantindo carregamento rápido e fácil manutenção.
+O **Sabor Verde** é um site institucional desenvolvido em HTML, CSS e JavaScript puro para um restaurante focado em alimentação natural e saudável. O projeto foi construído sem dependência de frameworks externos, garantindo carregamento rápido e fácil manutenção.
 
 ---
 
-## 🚀 Stack Tecnológica
+## ✨ Seções do Site
+
+- 🏠 **Início** — Apresentação visual do restaurante
+- 🍽️ **Cardápio** — Apresentação dos pratos e opções saudáveis
+- 📍 **Sobre** — História e missão do restaurante
+- 📞 **Contato** — Informações de contato e localização
+
+---
+
+## 🚀 Tecnologias
 
 | Tecnologia | Uso |
 |---|---|
 | HTML5 | Estrutura semântica das páginas |
-| CSS3 | Estilização responsiva e animações |
-| JavaScript | Interações e dinamismo |
-| Vercel | Hospedagem e deploy automático |
+| CSS3 | Estilização, animações e layout responsivo |
+| JavaScript | Interatividade e comportamento dinâmico |
+| Vercel | Hospedagem e deploy contínuo |
 
 ---
 
-## 📁 Estrutura do Projeto
+## 📁 Estrutura
 
 ```
 saborverde/
-├── css/                  # Folhas de estilo
-├── js/                   # Scripts JavaScript
-├── imagens/              # Assets de imagens
-├── secoes/               # Seções HTML modulares
-└── index.html            # Página principal
+├── index.html
+├── css/
+├── js/
+├── imagens/
+└── secoes/
 ```
 
 ---
 
-## ✨ Funcionalidades
+## ⚙️ Como Executar
 
-- 🌱 Apresentação do restaurante e proposta
-- 🥗 Cardápio digital com categorias
-- 📞 Informações de contato e localização
-- 📱 Layout responsivo (mobile-first)
-- ⚡ Carregamento leve sem dependência de frameworks
-
----
-
-## ⚙️ Rodando Localmente
-
-Não requer instalação de dependências.
-
-```bash
-# Clone o repositório
-git clone https://github.com/Brunofcrosa/saborverde.git
-cd saborverde
-
-# Abra o arquivo no navegador
-open index.html
-# ou use a extensão Live Server no VS Code
-```
-
----
-
-## 🌐 Deploy
-
-Deploy automático via **Vercel**. Todo push na branch `main` aciona o pipeline de deploy.
-
-```bash
-# Para fazer deploy manual via Vercel CLI
-vercel --prod
-```
-
----
-
-## 📣 Melhorias Futuras
-
-- [ ] Integração com sistema de reservas online
-- [ ] Internacionalização (pt-BR / en)
-- [ ] Formulário de contato com backend
-- [ ] Seção de avaliações de clientes
-
----
-
-## 👤 Autor
-
-**Bruno Fetzer** — Desenvolvedor Full Stack
-
-[![GitHub](https://img.shields.io/badge/GitHub-Brunofcrosa-181717?logo=github)](https://github.com/Brunofcrosa)
-[![Portfolio](https://img.shields.io/badge/Portfolio-brunofcrosa-blue)](https://portfolio-brunofcrosas-projects.vercel.app)
+Abra o `index.html` diretamente no navegador ou utilize **Live Server** no VS Code.
